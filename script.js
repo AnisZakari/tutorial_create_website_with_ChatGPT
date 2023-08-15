@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     productCards.forEach(card => {
         card.addEventListener("mouseenter", () => {
-            card.style.backgroundColor = "#555";
+            // You can add other dynamic behavior here if needed
         });
         card.addEventListener("mouseleave", () => {
-            card.style.backgroundColor = "#333";
+            // You can add other dynamic behavior here if needed
         });
     });
 });

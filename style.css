@@ -12,6 +12,9 @@ body {
     align-items: center;
     justify-content: center;
     color: #fff;
+    overflow: hidden;
+    /* Ensures that the video won't overflow the section */
+
 }
 
 .landing-content {
@@ -21,14 +24,16 @@ body {
 }
 
 #bgVideo {
-    position: absolute;
+    position: fixed;
+    /* Fixes the video in place */
+    z-index: -1;
+    /* Keeps the video behind the content */
     top: 50%;
     left: 50%;
     min-width: 100%;
     min-height: 100%;
     width: auto;
     height: auto;
-    z-index: -1;
     transform: translateX(-50%) translateY(-50%);
 }
 
