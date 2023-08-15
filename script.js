@@ -1,10 +1,12 @@
-// Simple script for smooth scrolling
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
+    const productCards = document.querySelectorAll(".product-card");
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+    productCards.forEach(card => {
+        card.addEventListener("mouseenter", () => {
+            card.style.backgroundColor = "#555";
+        });
+        card.addEventListener("mouseleave", () => {
+            card.style.backgroundColor = "#333";
         });
     });
 });
